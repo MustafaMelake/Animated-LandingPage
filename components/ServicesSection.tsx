@@ -89,12 +89,12 @@ export default function Services() {
               return (
                 <li
                   key={service.id}
-                  className="group relative flex flex-col bg-card shadow-[0_12px_20px_0_rgba(0,0,0,0.05)] transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:bg-zinc-800/80"
+                  className="group relative flex flex-col bg-card shadow-[0_12px_20px_0_rgba(0,0,0,0.05)] transition-all duration-500 hover:!translate-y-[-20px] hover:shadow-2xl dark:bg-zinc-800/80 cursor-pointer"
                 >
                   {/* Animated Top Border */}
                   <div
                     aria-hidden="true"
-                    className="absolute -top-[3px] left-1/2 h-[3px] w-0 -translate-x-1/2 bg-primary transition-all duration-500 group-hover:w-full"
+                    className="absolute -top-[3px] left-1/2 h-[3px] w-0 -translate-x-1/2 bg-primary transition-all duration-500 group-hover:w-full pointer-events-none z-20"
                   />
 
                   {/* Icon & Title */}

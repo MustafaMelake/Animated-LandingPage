@@ -1,7 +1,24 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+@custom-variant hover (&:hover);
+@custom-variant group-hover (.group:hover &);
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -114,20 +131,4 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
-
-    scroll-behavior: smooth;
-    /* بيخلي السكرول يقف قبل السكشن بشوية عشان النافبار ميتغطيش */
-    scroll-padding-top: 5rem;
-  }
 }
